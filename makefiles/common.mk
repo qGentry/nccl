@@ -79,7 +79,7 @@ NVLDFLAGS   += ${GCOV_FLAGS:%=-Xcompiler %}
 ########## GCOV ##########
 
 ifeq ($(DEBUG), 0)
-NVCUFLAGS += -O3 -G
+NVCUFLAGS += -O3 -G -g -dopt=on
 CXXFLAGS  += -O3 -g -ggdb3
 else
 NVCUFLAGS += -O0 -G -g
